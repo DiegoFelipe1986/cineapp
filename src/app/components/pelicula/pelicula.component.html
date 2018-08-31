@@ -1,0 +1,26 @@
+<div *ngIf="pelicula" class="container main-container animated fadeIn Fast">
+    <div class="row">
+        <div class="col-md-5">
+
+            <img [src]="pelicula | peliculaImagen:true" [alt]="pelicula.original_title" class="img-thumbnail img-fluid">
+        </div>
+        <div class="col-md-7">
+            <h2 class="titulo-pelicula">{{pelicula.title}}</h2>
+            <hr>
+            <h5>Título Original: {{ pelicula.original_title }}</h5>
+            <h3>Sinopsis</h3>
+            <p class="text-justify">{{ pelicula.overview }}</p>
+            <p>{{ pelicula.tagline }}</p>
+            <h4 class="badge badge-warning" style="padding:10px;"> Estrenada: {{ pelicula.release_date }}</h4>
+            <h4 class="badge badge-success" style="padding:10px;"> Calificación: {{ pelicula.vote_average }}/10</h4>
+            <h4 class="badge badge-info" style="padding:10px;"> Idioma original:<span style="text-transform: uppercase;"> {{ pelicula.original_language }}</span></h4>
+            <br>
+            <hr>
+            <div class="center">
+                <button [routerLink]="['/'+regresar]" class="btn btn-outline-danger">
+                Regresar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

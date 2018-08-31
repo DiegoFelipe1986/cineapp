@@ -1,0 +1,11 @@
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">CineApp</h1>
+            <p class="lead" style="text-align: justify;">Esta es una aplicación basada en Angular consumiendo la API en su versión 3 de   <a href="https://www.themoviedb.org/" target="_blank">TheMovieDB.</a> Prueba realizada para Aranda Software.</p>
+        </div>
+    </div>
+    <div class="container">
+        <app-galeria [peliculas]="cartelera|slice:0:11" titulo="Películas en cartelera"></app-galeria>
+        <app-galeria [peliculas]="populares|slice:0:11" titulo="Populares"></app-galeria>
+        <app-galeria [peliculas]="popularesNinos|slice:0:11" titulo="Populares Niños"></app-galeria>
+    </div>
